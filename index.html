@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width,
+      initial-scale=1.0,
+      maximum-scale=1.0,
+      user-scalable=no">
+
+<title>দুর্গাপুজো • উৎসবের সুর</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800;900&family=Noto+Serif+Bengali:wght@500;600;700;800;900&display=swap"
+      rel="stylesheet">
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,
+body{
+  width:100%;
+  min-height:100%;
+}
+
+body{
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:18px;
+
+  overflow:hidden;
+
+  font-family:
+    "Noto Sans Bengali",
+    sans-serif;
+
+  color:#fff;
+
+  position:relative;
+
+  background:
+    radial-gradient(
+      circle at 50% 18%,
+      #790b19 0%,
+      #49050e 30%,
+      #210208 62%,
+      #080103 100%
+    );
+}
+
+
+/* =========================
+   BACKGROUND GLOW
+========================= */
+
+body::before{
+  content:"";
+
+  position:fixed;
+  inset:-25%;
+
+  pointer-events:none;
+
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(255,210,100,.34),
+      transparent 31%
+    ),
+    radial-gradient(
+      circle at 8% 85%,
+      rgba(220,25,55,.28),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 92% 85%,
+      rgba(255,110,25,.22),
+      transparent 38%
+    );
+
+  animation:
+    ambientGlow
+    8s
+    ease-in-out
+    infinite alternate;
+}
+
+@keyframes ambientGlow{
+
+  from{
+    transform:scale(1);
+    opacity:.65;
+  }
+
+  to{
+    transform:scale(1.12);
+    opacity:1;
+  }
+}
+
+
+/* =========================
+   DECORATIVE LIGHT
+========================= */
+
+.glow{
+  position:fixed;
+
+  width:250px;
+  height:250px;
+
+  border-radius:50%;
+
+  filter:blur(75px);
+
+  pointer-events:none;
+
+  opacity:.16;
+}
+
+.glow.one{
+  top:-120px;
+  left:-100px;
+  background:#ffb21c;
+}
+
+.glow.two{
+  right:-130px;
+  bottom:-120px;
+  background:#e51d45;
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.card{
+
+  position:relative;
+  z-index:10;
+
+  width:100%;
+  max-width:400px;
+
+  padding:30px 19px 23px;
+
+  text-align:center;
+
+  border-radius:34px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.17),
+      rgba(255,255,255,.055) 48%,
+      rgba(35,2,8,.54)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,.28);
+
+  backdrop-filter:
+    blur(25px)
+    saturate(155%);
+
+  -webkit-backdrop-filter:
+    blur(25px)
+    saturate(155%);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.78),
+    inset 0 1px rgba(255,255,255,.28),
+    inset 0 -1px rgba(255,190,80,.08),
+    0 0 75px rgba(255,60,20,.12);
+}
+
+.card::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+
+  left:13%;
+  right:13%;
+
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.9),
+      transparent
+    );
+
+  opacity:.7;
+}
+
+
+/* =========================
+   BADGE
+========================= */
+
+.badge{
+
+  display:inline-flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:7px;
+
+  padding:7px 17px;
+
+  border-radius:50px;
+
+  color:#ffe8a5;
+
+  font-size:10px;
+
+  font-weight:700;
+
+  letter-spacing:.7px;
+
+  background:
+    rgba(255,205,70,.08);
+
+  border:
+    1px solid
+    rgba(255,220,120,.32);
+
+  box-shadow:
+    inset 0 1px rgba(255,255,255,.16),
+    0 0 22px rgba(255,190,50,.08);
+
+  margin-bottom:17px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.title{
+
+  font-family:
+    "Noto Serif Bengali",
+    serif;
+
+  font-size:39px;
+
+  line-height:1.25;
+
+  font-weight:900;
+
+  color:#ffe28a;
+
+  text-shadow:
+    0 3px 12px rgba(0,0,0,.85),
+    0 0 24px rgba(255,200,65,.38);
+
+  margin-bottom:5px;
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.subtitle{
+
+  font-family:
+    "Noto Serif Bengali",
+    serif;
+
+  font-size:13px;
+
+  font-weight:500;
+
+  color:
+    rgba(255,245,220,.88);
+
+  margin-bottom:19px;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider{
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:9px;
+
+  margin:-3px 0 18px;
+}
+
+.divider span{
+
+  width:45px;
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,215,110,.65)
+    );
+}
+
+.divider span:last-child{
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,215,110,.65),
+      transparent
+    );
+}
+
+.divider i{
+
+  color:#ffd66c;
+
+  font-size:8px;
+
+  text-shadow:
+    0 0 10px rgba(255,210,80,.8);
+}
+
+
+/* =========================
+   PLAYER
+========================= */
+
+.player{
+
+  padding:25px 16px 23px;
+
+  border-radius:28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.095),
+      rgba(0,0,0,.35)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,.17);
+
+  backdrop-filter:
+    blur(20px);
+
+  -webkit-backdrop-filter:
+    blur(20px);
+
+  box-shadow:
+    inset 0 1px rgba(255,255,255,.13),
+    0 16px 38px rgba(0,0,0,.30);
+}
+
+
+/* =========================
+   MUSIC ORB
+========================= */
+
+.music-orb{
+
+  width:72px;
+  height:72px;
+
+  margin:0 auto 16px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  color:#fff0ae;
+
+  font-size:27px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.25),
+      rgba(255,130,30,.08)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,.40);
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+
+  box-shadow:
+    inset 0 1px rgba(255,255,255,.38),
+    0 0 23px rgba(255,205,70,.45),
+    0 0 55px rgba(255,60,20,.15);
+
+  animation:
+    orbPulse
+    2.8s
+    ease-in-out
+    infinite alternate;
+}
+
+@keyframes orbPulse{
+
+  from{
+    transform:scale(1);
+  }
+
+  to{
+    transform:scale(1.045);
+  }
+}
+
+
+/* =========================
+   SONG INFORMATION
+========================= */
+
+.song-title{
+
+  font-family:
+    "Noto Serif Bengali",
+    serif;
+
+  font-size:15px;
+
+  font-weight:800;
+
+  color:#ffe8ae;
+
+  margin-bottom:6px;
+}
+
+.song-subtitle{
+
+  font-size:10px;
+
+  color:
+    rgba(255,255,255,.60);
+
+  margin-bottom:17px;
+}
+
+
+/* =========================
+   SOUND WAVE
+========================= */
+
+.wave{
+
+  height:26px;
+
+  display:flex;
+
+  align-items:flex-end;
+  justify-content:center;
+
+  gap:5px;
+
+  margin-bottom:21px;
+}
+
+.bar{
+
+  width:4px;
+  height:5px;
+
+  border-radius:10px;
+
+  background:
+    linear-gradient(
+      to top,
+      #ff9d2e,
+      #ffe47e
+    );
+
+  box-shadow:
+    0 0 9px
+    rgba(255,205,80,.78);
+}
+
+.playing .bar{
+
+  animation:
+    equalizer
+    .72s
+    ease-in-out
+    infinite alternate;
+}
+
+.playing .bar:nth-child(1){
+  animation-delay:.05s;
+}
+
+.playing .bar:nth-child(2){
+  animation-delay:.23s;
+}
+
+.playing .bar:nth-child(3){
+  animation-delay:.40s;
+}
+
+.playing .bar:nth-child(4){
+  animation-delay:.16s;
+}
+
+.playing .bar:nth-child(5){
+  animation-delay:.32s;
+}
+
+.playing .bar:nth-child(6){
+  animation-delay:.12s;
+}
+
+.playing .bar:nth-child(7){
+  animation-delay:.28s;
+}
+
+@keyframes equalizer{
+
+  from{
+    height:4px;
+  }
+
+  to{
+    height:24px;
+  }
+}
+
+
+/* =========================
+   PLAY BUTTON
+========================= */
+
+.play-btn{
+
+  width:82px;
+  height:82px;
+
+  margin:0 auto 20px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  border:
+    1px solid
+    rgba(255,255,255,.48);
+
+  cursor:pointer;
+
+  color:#fff1b0;
+
+  font-size:24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.28),
+      rgba(255,255,255,.06)
+    );
+
+  backdrop-filter:
+    blur(20px);
+
+  -webkit-backdrop-filter:
+    blur(20px);
+
+  box-shadow:
+    inset 0 1px rgba(255,255,255,.42),
+    0 0 27px rgba(255,205,70,.46),
+    0 0 65px rgba(255,60,20,.18);
+
+  transition:.2s;
+}
+
+.play-btn:hover{
+  transform:scale(1.07);
+}
+
+.play-btn:active{
+  transform:scale(.91);
+}
+
+
+/* =========================
+   VOLUME
+========================= */
+
+.volume-area{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  width:100%;
+
+  padding:10px 12px;
+
+  border-radius:17px;
+
+  background:
+    rgba(255,255,255,.075);
+
+  border:
+    1px solid
+    rgba(255,255,255,.12);
+}
+
+.volume-icon{
+
+  width:24px;
+
+  color:#ffe49a;
+
+  font-size:14px;
+
+  cursor:pointer;
+}
+
+.volume-slider{
+
+  flex:1;
+
+  height:5px;
+
+  appearance:none;
+  -webkit-appearance:none;
+
+  border-radius:20px;
+
+  outline:none;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffd35c 70%,
+      rgba(255,255,255,.18) 70%
+    );
+
+  cursor:pointer;
+}
+
+.volume-slider::-webkit-slider-thumb{
+
+  appearance:none;
+  -webkit-appearance:none;
+
+  width:16px;
+  height:16px;
+
+  border-radius:50%;
+
+  border:
+    1px solid
+    rgba(255,255,255,.65);
+
+  background:#ffe17b;
+
+  box-shadow:
+    0 0 12px
+    rgba(255,210,70,.75);
+}
+
+.volume-slider::-moz-range-thumb{
+
+  width:16px;
+  height:16px;
+
+  border-radius:50%;
+
+  border:
+    1px solid
+    rgba(255,255,255,.65);
+
+  background:#ffe17b;
+}
+
+.volume-value{
+
+  width:34px;
+
+  font-size:9px;
+
+  color:
+    rgba(255,235,180,.75);
+
+  text-align:right;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+  margin-top:20px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:10px;
+
+  font-size:11px;
+
+  font-weight:600;
+
+  color:
+    rgba(255,220,125,.88);
+}
+
+.footer-text{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:6px;
+}
+
+.heart{
+
+  color:#ff5265;
+
+  text-shadow:
+    0 0 9px
+    rgba(255,60,90,.4);
+}
+
+
+/* =========================
+   YOUTUBE LOGO
+========================= */
+
+.youtube-link{
+
+  width:29px;
+  height:29px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  text-decoration:none;
+
+  color:#ff3030;
+
+  font-size:18px;
+
+  border-radius:8px;
+
+  background:
+    rgba(255,255,255,.06);
+
+  border:
+    1px solid
+    rgba(255,255,255,.10);
+
+  box-shadow:
+    0 0 14px
+    rgba(255,30,30,.18);
+
+  transition:.2s;
+}
+
+.youtube-link:hover{
+
+  transform:scale(1.12);
+
+  color:#ff5151;
+
+  box-shadow:
+    0 0 20px
+    rgba(255,30,30,.40);
+}
+
+
+/* =========================
+   HIDDEN YOUTUBE PLAYER
+========================= */
+
+#youtube-player{
+
+  position:fixed;
+
+  width:200px;
+  height:115px;
+
+  right:-220px;
+  bottom:10px;
+
+  opacity:.01;
+
+  pointer-events:none;
+}
+
+
+/* =========================
+   SMALL SCREEN
+========================= */
+
+@media(max-height:650px){
+
+  .card{
+    padding-top:20px;
+    padding-bottom:17px;
+  }
+
+  .title{
+    font-size:33px;
+  }
+
+  .player{
+    padding:19px 14px;
+  }
+
+  .music-orb{
+    width:60px;
+    height:60px;
+    margin-bottom:10px;
+  }
+
+  .play-btn{
+    width:70px;
+    height:70px;
+    margin-bottom:15px;
+  }
+
+  .wave{
+    margin-bottom:15px;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="glow one"></div>
+<div class="glow two"></div>
+
+
+<!-- =========================
+     MAIN CARD
+========================= -->
+
+<div class="card">
+
+
+  <div class="badge">
+
+    <i class="fas fa-om"></i>
+
+    শুভ শারদীয়া
+
+    <i class="fas fa-om"></i>
+
+  </div>
+
+
+  <div class="title">
+    দুর্গাপুজো
+  </div>
+
+
+  <div class="subtitle">
+    মা আসছেন • আগমনী সুরে
+  </div>
+
+
+  <div class="divider">
+
+    <span></span>
+
+    <i class="fas fa-star"></i>
+
+    <span></span>
+
+  </div>
+
+
+  <!-- PLAYER -->
+
+  <div class="player">
+
+
+    <div class="music-orb">
+
+      <i class="fas fa-music"></i>
+
+    </div>
+
+
+    <div class="song-title">
+      দুর্গাপুজো ২০২৬
+    </div>
+
+
+    <div class="song-subtitle">
+      শারদীয়ার বিশেষ গান
+    </div>
+
+
+    <!-- WAVE -->
+
+    <div
+      class="wave"
+      id="wave">
+
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+
+    </div>
+
+
+    <!-- PLAY / PAUSE -->
+
+    <button
+      class="play-btn"
+      id="playBtn"
+      type="button"
+      aria-label="গান চালু বা বন্ধ করুন">
+
+      <i
+        class="fas fa-play"
+        id="playIcon">
+      </i>
+
+    </button>
+
+
+    <!-- VOLUME -->
+
+    <div class="volume-area">
+
+      <div
+        class="volume-icon"
+        id="volumeIcon"
+        title="Mute / Unmute">
+
+        <i class="fas fa-volume-high"></i>
+
+      </div>
+
+
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="70"
+        class="volume-slider"
+        id="volumeSlider"
+        aria-label="Volume">
+
+
+      <div
+        class="volume-value"
+        id="volumeValue">
+
+        70%
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <div class="footer">
+
+    <div class="footer-text">
+
+      <i class="fas fa-heart heart"></i>
+
+      <span>
+        Created by Pujo Reel Official
+      </span>
+
+    </div>
+
+
+    <a
+      href="https://youtube.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="youtube-link"
+      aria-label="YouTube">
+
+      <i class="fab fa-youtube"></i>
+
+    </a>
+
+  </div>
+
+
+</div>
+
+
+<!-- YOUTUBE -->
+
+<div id="youtube-player"></div>
+
+
+<script>
+
+/* =========================
+   YOUTUBE VIDEO
+========================= */
+
+const VIDEO_ID = "kaQgOifezFA";
+
+let player = null;
+
+let isPlaying = false;
+
+let lastVolume = 70;
+
+
+/* =========================
+   LOAD YOUTUBE API
+========================= */
+
+const ytScript =
+  document.createElement("script");
+
+ytScript.src =
+  "https://www.youtube.com/iframe_api";
+
+document.head.appendChild(ytScript);
+
+
+/* =========================
+   API READY
+========================= */
+
+window.onYouTubeIframeAPIReady =
+function(){
+
+  player =
+    new YT.Player(
+      "youtube-player",
+      {
+
+        videoId:VIDEO_ID,
+
+        playerVars:{
+          playsinline:1,
+          controls:0,
+          rel:0,
+          modestbranding:1,
+          iv_load_policy:3
+        },
+
+        events:{
+          onReady:onPlayerReady,
+          onStateChange:onPlayerStateChange,
+          onError:onPlayerError
+        }
+
+      }
+    );
+
+};
+
+
+/* =========================
+   PLAYER READY
+========================= */
+
+function onPlayerReady(){
+
+  player.setVolume(lastVolume);
+
+}
+
+
+/* =========================
+   PLAY / PAUSE
+========================= */
+
+document
+  .getElementById("playBtn")
+  .addEventListener(
+    "click",
+    function(){
+
+      if(!player){
+        return;
+      }
+
+      if(isPlaying){
+
+        player.pauseVideo();
+
+      }else{
+
+        player.playVideo();
+
+      }
+
+    }
+  );
+
+
+/* =========================
+   PLAYER STATE
+========================= */
+
+function onPlayerStateChange(event){
+
+  const icon =
+    document.getElementById(
+      "playIcon"
+    );
+
+  const wave =
+    document.getElementById(
+      "wave"
+    );
+
+
+  if(
+    event.data ===
+    YT.PlayerState.PLAYING
+  ){
+
+    isPlaying = true;
+
+    icon.className =
+      "fas fa-pause";
+
+    wave.classList.add(
+      "playing"
+    );
+
+    localStorage.setItem(
+      "pujoPlaying",
+      "true"
+    );
+
+  }
+
+  else{
+
+    isPlaying = false;
+
+    icon.className =
+      "fas fa-play";
+
+    wave.classList.remove(
+      "playing"
+    );
+
+    localStorage.setItem(
+      "pujoPlaying",
+      "false"
+    );
+
+  }
+
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+function onPlayerError(){
+
+  isPlaying = false;
+
+  document
+    .getElementById("playIcon")
+    .className =
+      "fas fa-play";
+
+  document
+    .getElementById("wave")
+    .classList.remove(
+      "playing"
+    );
+
+}
+
+
+/* =========================
+   VOLUME
+========================= */
+
+const volumeSlider =
+  document.getElementById(
+    "volumeSlider"
+  );
+
+const volumeValue =
+  document.getElementById(
+    "volumeValue"
+  );
+
+const volumeIcon =
+  document.getElementById(
+    "volumeIcon"
+  );
+
+
+function updateVolumeUI(value){
+
+  value = Number(value);
+
+  volumeValue.textContent =
+    value + "%";
+
+
+  volumeSlider.style.background =
+    `linear-gradient(
+      90deg,
+      #ffd35c ${value}%,
+      rgba(255,255,255,.18) ${value}%
+    )`;
+
+
+  const icon =
+    volumeIcon.querySelector("i");
+
+
+  if(value === 0){
+
+    icon.className =
+      "fas fa-volume-xmark";
+
+  }
+
+  else if(value < 50){
+
+    icon.className =
+      "fas fa-volume-low";
+
+  }
+
+  else{
+
+    icon.className =
+      "fas fa-volume-high";
+
+  }
+
+}
+
+
+volumeSlider.addEventListener(
+  "input",
+  function(){
+
+    const value =
+      Number(this.value);
+
+    lastVolume = value;
+
+    if(player){
+
+      player.unMute();
+
+      player.setVolume(value);
+
+    }
+
+    updateVolumeUI(value);
+
+    localStorage.setItem(
+      "pujoVolume",
+      value
+    );
+
+  }
+);
+
+
+/* =========================
+   MUTE
+========================= */
+
+volumeIcon.addEventListener(
+  "click",
+  function(){
+
+    if(!player){
+      return;
+    }
+
+
+    if(player.isMuted()){
+
+      player.unMute();
+
+      player.setVolume(
+        lastVolume || 70
+      );
+
+      volumeSlider.value =
+        lastVolume || 70;
+
+      updateVolumeUI(
+        lastVolume || 70
+      );
+
+    }
+
+    else{
+
+      lastVolume =
+        Number(
+          volumeSlider.value
+        ) || 70;
+
+      player.mute();
+
+      volumeSlider.value = 0;
+
+      updateVolumeUI(0);
+
+    }
+
+  }
+);
+
+
+/* =========================
+   RESTORE VOLUME
+========================= */
+
+const savedVolume =
+  localStorage.getItem(
+    "pujoVolume"
+  );
+
+if(savedVolume !== null){
+
+  lastVolume =
+    Number(savedVolume);
+
+  volumeSlider.value =
+    lastVolume;
+
+}
+
+updateVolumeUI(
+  volumeSlider.value
+);
+
+
+/* =========================
+   RETURN TO PAGE
+========================= */
+
+document.addEventListener(
+  "visibilitychange",
+  function(){
+
+    if(
+      document.visibilityState ===
+      "visible"
+    ){
+
+      /*
+       যদি গান আগে চলছিল,
+       page-এ ফিরে এলে player state
+       refresh করা হবে।
+
+       Browser-এর autoplay policy
+       থাকলে browser নিজে থেকে
+       playback আটকাতে পারে।
+      */
+
+      if(
+        localStorage.getItem(
+          "pujoPlaying"
+        ) === "true" &&
+        player
+      ){
+
+        setTimeout(
+          function(){
+
+            try{
+              player.playVideo();
+            }
+            catch(e){}
+
+          },
+          300
+        );
+
+      }
+
+    }
+
+  }
+);
+
+
+/* =========================
+   PAGE SHOW
+========================= */
+
+window.addEventListener(
+  "pageshow",
+  function(){
+
+    if(
+      localStorage.getItem(
+        "pujoPlaying"
+      ) === "true" &&
+      player
+    ){
+
+      try{
+        player.playVideo();
+      }
+      catch(e){}
+
+    }
+
+  }
+);
+
+</script>
+
+</body>
+</html>
